@@ -24,3 +24,8 @@ jobs:
 
     - name: Run Database Test
       uses: EnricoMi/publish-unit-test-result-action@v1
+      if: always()
+        with:
+          files: |
+            *.xml
+            !config.xml
